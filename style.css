@@ -1,0 +1,68 @@
+/*
+Theme Name: Zibi 涵知自用子主题
+Theme URI: https://www.yhanzhi.com/
+Template: zibll
+Author: 涵知
+Author URI: https://www.yhanzhi.com/
+Description: 精简的子比子主题，只包含网站美化相关内容
+Version: 1.0
+Requires PHP: 7.0-8.0
+Tags: 子比主题, 美化, 精简
+*/
+
+/* 引入子比主题样式 */
+@import url("../zibll-V8.1(1833)/zibll/style.css");
+
+/* 自定义美化样式 */
+:root {
+    --main-color: #ff6000;
+    --secondary-color: #3385ff;
+    --accent-color: #13adff;
+    --bg-color: #f8f8f8;
+    --text-color: #333;
+    --light-text: #666;
+    --border-radius: 8px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 页脚美化 */
+#panda_stat .siteCount ul li span {
+    font-size: 36px;
+    font-weight: bold;
+    background-image: linear-gradient(90deg, var(--accent-color) 0, var(--secondary-color) 50%, var(--secondary-color));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* 顶部热点样式 */
+.hbbg {
+    background: linear-gradient(270deg, var(--main-color) 0%, #ff4d00 100%);
+    height: max(5.6rem);
+    position: relative;
+    overflow: hidden;
+}
+
+.hbbg::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, var(--bg-color) 100%);
+}
+
+/* 按钮美化 */
+.btn-orange {
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+    background-color: #cc4d00;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
